@@ -25,23 +25,33 @@
               </a>
             </li>
 
-            <li><a href="#">
+            <li><a href="index.php?act=listhotel">
                 <i class="fas fa-tasks"></i>
                 <span class="nav-item">Quản Lý Phòng </span>
               </a>
             </li>
-            <li><a href="#">
-                <i class="fab fa-dochub"></i>
-                <span class="nav-item">QUản Lý Loại Phòng</span>
+            
+            <li><a href="index.php?act=home">
+                <i class="fas fa-tasks"></i>
+                <span class="nav-item">Quản Lý Loại Phòng </span>
               </a>
             </li>
+            
             <li><a href="#">
-                <i class="fas fa-cog"></i>
+                <i class="fas fa-tasks"></i>
                 <span class="nav-item">Quản Lý Hóa Đơn </span>
               </a>
             </li>
+            
             <li><a href="#">
-                <i class="fas fa-question-circle"></i>
+                <i class="fas fa-tasks"></i>
+                <span class="nav-item">Quản Lý Chi Tiết </span>
+              </a>
+            </li>
+            
+           
+            <li><a href="#">
+                <i class="fas fa-tasks"></i>
                 <span class="nav-item">Quản Lý Thanh Toán</span>
               </a>
             </li>
@@ -59,7 +69,7 @@
         </div>
       </nav>
       <!-- Hiển thị  -->
-      <section class="main">
+      <!-- <section class="main">
         <div class="main-top">
           <p>Booking Hotel </p>
         </div>
@@ -68,9 +78,5 @@
 
         </div>
     </div>
-    </section>
-    </div>
-  </body>
-
-  </html>
-</span>
+    </section> -->
+   
