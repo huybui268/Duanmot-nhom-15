@@ -1,24 +1,27 @@
 <?php
+
 function pdo_get_connection(){
     $servername = "localhost";
     $username = "root";
     $password = "";
     try {
-        $conn = new PDO("mysql:host=$servername;dbname=duanmot", $username, $password);
+        $conn = new PDO("mysql:host=$servername;dbname=duan1", $username, $password);
+        // set the PDO error mode to exception
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        // echo "Connected successfully";
         return $conn;
     } catch(PDOException $e) {
         echo "Connection failed: " . $e->getMessage();
     }
 }
+
 function pdo_execute($sql){
     $sql_args=array_slice(func_get_args(),1);
     try{
         $conn=pdo_get_connection();
         $stmt=$conn->prepare($sql);
-        // Chuẩn bị câu lệnh SQL
         $stmt->execute($sql_args);
-        // Thực thi câu lệnh SQL
+
     }
     catch(PDOException $e){
         throw $e;
@@ -27,7 +30,23 @@ function pdo_execute($sql){
         unset($conn);
     }
 }
-// truy vấn nhiều dữ liệu
+
+function pdo_execute_return_lastInsertId($sql){
+    $sql_args=array_slice(func_get_args(),1);
+    try{
+        $conn=pdo_get_connection();
+        $stmt=$conn->prepare($sql);
+        $stmt->execute($sql_args);
+        return $conn->lastInsertId();
+    }
+    catch(PDOException $e){
+        throw $e;
+    }
+    finally{
+        unset($conn);
+    }
+}
+
 function pdo_query($sql){
     $sql_args=array_slice(func_get_args(),1);
 
@@ -45,7 +64,7 @@ function pdo_query($sql){
         unset($conn);
     }
 }
-// truy vấn  1 dữ liệu
+
 function pdo_query_one($sql){
     $sql_args=array_slice(func_get_args(),1);
     try{
@@ -53,7 +72,6 @@ function pdo_query_one($sql){
         $stmt=$conn->prepare($sql);
         $stmt->execute($sql_args);
         $row=$stmt->fetch(PDO::FETCH_ASSOC);
-        // đọc và hiển thị giá trị trong danh sách trả về
         return $row;
     }
     catch(PDOException $e){
@@ -63,5 +81,4 @@ function pdo_query_one($sql){
         unset($conn);
     }
 }
-pdo_get_connection();
 ?>
