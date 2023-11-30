@@ -3,9 +3,11 @@
   <html lang="en">
 
   <head>
-    <title>DỰ Án</title>
+    <title>DỰ Án 1</title>
+    <script src="https://www.gstatic.com/charts/loader.js"></script>
     <!-- <link rel="stylesheet" href="css/css.css" /> -->
     <style>@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700");
+    
 *{
   margin: 0;
   padding: 0;
@@ -251,13 +253,6 @@ a:hover{
             <li><a href="index.php?act=listdh">
                 <i class="fas fa-tasks"></i>
                 <span class="nav-item">Quản Lý Hóa Đơn </span>
-              </a>
-            </li>
-            
-           
-            <li><a href="index.php?act=listcart">
-                <i class="fas fa-tasks"></i>
-                <span class="nav-item">Quản Lý Giỏ Hàng</span>
               </a>
             </li>
             <li><a href="index.php?act=listtk">

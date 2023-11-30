@@ -7,7 +7,6 @@
             <div class="row mb10 formds_loai">
                 <table border="1" class="mb10">
                     <tr>
-                        <th>Chọn nhanh</th>
                         <th>Mã đơn hàng</th>
                         <th>Khách hàng</th>
                         <th>Số lượng hàng</th>
@@ -24,8 +23,7 @@
                         $ttdh=get_ttdh($bill_status);
                         $pttt=get_pttt($bill_pttt); ?>
                         <tr>
-                            <td><input type="checkbox" name=""></td>
-                            <td>DAM-<?php echo $id ?></td>
+                            <td>DA1-<?php echo $id ?></td>
                             <td>
                                 <?php echo $bill_name ?><br>
                                 <?php echo $bill_email ?><br>
@@ -38,7 +36,7 @@
                             <td><?php echo $pttt ?></td>
                             <td><?php echo $ttdh ?></td>
                             <td><a href="index.php?act=updatebill&iddh=<?php echo $id ?>"><input type="button" value="Sửa"></a>
-                            <a href="index.php?act=deletebill&iddh=<?php echo $id ?>"><input type="button" value="Xóa"></a>
+                           
                         </td>
                         <td><a href="index.php?act=listcart&idbill=<?php echo $id ?>"><input type="button" value="Chi Tiết Đơn"></a></td>
                         </tr>

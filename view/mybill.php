@@ -105,7 +105,7 @@
                              if($bill_status == 0 ){
                                 ?>   
                              
-                             <td><a href="index.php?act=deletemybill&id=<?php echo $id ?>"><input type="button" value="Hủy Đơn"></a></td>
+                             <td><a href="index.php?act=updatebill&id=<?php echo $id ?>"><input type="button" value="Hủy Đơn"></a></td>
                              <?php
                              }
                              ?>
@@ -113,7 +113,7 @@
                             if($bill_status == 1 ){
                               ?>   
                            
-                           <td><a href="index.php?act=deletemybill&id=<?php echo $id ?>"><input type="button" value="Hủy Đơn"></a></td>
+                           <td><a href="index.php?act=updatebill&id=<?php echo $id ?>"><input type="button" value="Hủy Đơn"></a></td>
                            <?php
                            }else{
                             ?>
@@ -134,10 +134,10 @@
                 <a href="index.php?act=ctsp"><input type="submit" name="thaydoi" value="Mua Thêm Sản Phẩm "></a><br>
                 <br>
             </div>
-            <div class="button1">
+            <!-- <div class="button1">
               
-                  <a onclick="return confirm('Bạn có chắc chắn muốn xóa hết')" href="index.php?act=deletemybill"><input type="submit" value="Hủy Đặt hàng"></a>
-            </div>
+                  <a onclick="return confirm('Bạn có chắc chắn muốn xóa hết')" href="index.php?act=updatebill"><input type="submit" value="Hủy Đặt hàng"></a>
+            </div> -->
             <br>
             
             <br><br>

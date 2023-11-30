@@ -1,23 +1,4 @@
 <?php
-// function updatesoluong($vitri){
-//     $vitri=-1;
-//     for($i=0;$i<sizeof($_SESSION["mycart"]);$i++){
-//         if($i==$vitri){
-//              $_SESSION["mycart"][$i][4]==$soluongmoi;
-//         }
-//     }
-// }
-// function checktrungsp(){
-//     $vitri=-1;
-//     for($i=0;$i<sizeof($_SESSION["mycart"]);$i++){
-//         if($_SESSION["mycart"][$i][0] === $id){
-
-//             $vitri=$i;
-//         }
-//     }
-//     return $vitri;
-// }
-
 function tongdonhang(){
 $tong=0;
 foreach($_SESSION['mycart'] as $cart){
@@ -64,11 +45,16 @@ function loadone_cart($id){
         $cart=pdo_query_one($sql);
         return $cart;
         }
-function loadall_cart($idbill){
-$sql="SELECT * FROM cart where idbill=$idbill";
+function loadall_cart($id){
+$sql="SELECT * FROM cart where id=$id";
 $bill=pdo_query($sql);
 return $bill;
 }
+function loadall_cart1($idbill){
+    $sql="SELECT * FROM cart where idbill=$idbill";
+    $bill=pdo_query($sql);
+    return $bill;
+    }
 function deletecart1($id){
     $sql="DELETE FROM cart where idb = $id" ;
      pdo_execute($sql);
@@ -120,6 +106,9 @@ switch ($n){
     case '3':
         $tt="Hoàn tất";
         break;
+        case '4':
+            $tt="Đơn hàng đã hủy";
+            break;  
     default:
         $tt="Đơn hàng mới";
         break;
@@ -142,5 +131,11 @@ switch ($n){
         break;
 }
 return $tt;
+}
+
+function updatebill($id){
+$sql= "UPDATE bill set `bill_status` = 4 where id=$id";
+pdo_execute($sql);
+
 }
 ?>

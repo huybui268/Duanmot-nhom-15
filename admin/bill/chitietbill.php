@@ -1,55 +1,44 @@
-<style>
-    .cuoi {
-        padding-left: 600px;
-    }
-</style>
-
-
-<?php foreach ($listbill as $bill) {
-                            extract($bill);
-                            $countsp=loadall_cart_count($id);
-                            $ttdh=get_ttdh($bill_status);
-                            $pttt=get_pttt($bill_pttt); ?>
-
-<div class="boxcontent_bill" style="text-align:center">
-    <div class=" mb10 formds_loai">
-        <h2>Đơn Hàng
-            <?php echo $id ?>
-        </h2>
+<div class="row">
+    <div class="row formtitle mb10">
+        <h1> </h1>
     </div>
-</div><br><br>
-<div class="cuoi">
-    <div class="boxtitle">THÔNG TIN ĐƠN HÀNG</div>
-    <div class="boxcontent_bill" style="">
-        <div class=" mb10 formds_loai">
-            Mã đơn hàng: DAM-
-            <?php echo $id ?>
-            <br>
-            Ngày đặt hàng:
-            <?php echo date("d/m/Y", strtotime($ngaydathang)) ?>
-            <br>
-            Tổng đơn hàng:
-            <?php echo number_format($total) ?> VND
-            <br>
-            Phương thức thanh toán:
-            <?php echo $pttt ?>
-        </div>
-    </div><br><br>
-
-    <div class="boxtitle">THÔNG TIN NGƯỜI NHẬN</div>
-    <div class="boxcontent_bill" style="">
-        <div class=" mb10 formds_loai">
-            Người đặt hàng:
-            <?php echo $bill_name ?><br>
-            Địa chỉ:
-            <?php echo $bill_address ?><br>
-            Email:
-            <?php echo $bill_email ?><br>
-            Số điện thoại:
-            <?php echo $bill_tel ?><br>
-        </div>
-       
-    </div><br><br>
-
-
-</div> <?php } ?>
+    <div class="row formcontent">
+        <form action="#" method="post">
+            <div class="row mb10 formds_loai">
+                <table border="1" class="mb10">
+                <tr>
+                    <th>Tên sản phẩm</th>
+                    <th>Hình ảnh</th>
+                    <th>Đơn giá</th>
+                    <th>Màu</th>
+                    <th>Số lượng</th>
+                    <th>Thành tiền</th>
+                    <th>Chức năng</th>
+                </tr>
+                <?php foreach ($cart as $bill) {
+                        extract($bill);
+                        $hinh = $image_path . $img;
+                        ?>
+ 
+                            <td>
+                                <?php echo $name?><br>
+                               
+                            </td>
+                            <td><img src="<?php echo $hinh ?>" alt="" width="70px" height="50px"></td>
+                            <td><?php echo number_format($price) ?> VND</td>
+                            <td><?php echo $mau ?></td>
+                            <td><?php echo $soluong ?></td>
+                            <td><?php echo $thanhtien ?></td>
+                           <td>
+                            <!-- <a href="index.php?act=updatecart&id=<?php echo $id ?>"><input type="button" value="Sửa"></a> -->
+                            <a href="index.php?act=deletecart&id=<?php echo $id ?>"><input type="button" value="Xóa"></a>
+                        </td>
+                        </td>
+                        </tr>
+                    <?php } ?>
+                </table>
+            </div>
+           
+        </form>
+    </div>
+</div>

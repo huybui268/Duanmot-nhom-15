@@ -8,6 +8,7 @@ include "../model/binhluan.php";
 include "../model/thongke.php";
 include "../model/cart.php";
 include "../global.php";
+ob_start();
 ?>
 <?php
 
@@ -76,6 +77,7 @@ include "header.php";
                 move_uploaded_file($_FILES['hinh_new']['tmp_name'],$target_file);
                 update_sanpham($id,$tensp,$giasp,$hinh,$mota,$iddm,$mota_dai);
                 $thongbao = "cập nhật thành công!";
+                header("location: index.php?act=listsp");
                 }
                 $listsp = loadall_sanpham("", 0);
                 $listdm=loadall_danhmuc();
@@ -119,7 +121,7 @@ include "header.php";
                         $tendm = $_POST['tendm'];
                         update_danhmuc($iddm, $tendm);
                         $tb="Sửa thành công";
-                        
+                        header("location: index.php?act=listdm");
                 }
 
                 include "danhmuc/updatedm.php";
@@ -212,10 +214,9 @@ include "header.php";
                 break;
                 case 'listcart':
                     if (isset($_GET['idbill'])) {
-                        loadone_cart1($_GET['idbill']);
-                    }   
-                    $cart= loadalll_cart();
-                    include "cart/cart.php";
+                        $cart=loadall_cart1($_GET['idbill']);
+                    }                     
+                    include "bill/chitietbill.php";
                     break;
                     case 'updatecart':
                         if(isset($_GET['id']) & $_GET['id'] > 0){
@@ -257,7 +258,7 @@ include "header.php";
                     $bill_status = $_POST['bill_status'];
                     $id = $_POST['id'];
                     update_bill($id, $bill_status);
-                    // header("location: index.php?act=listdh");
+                    header("location:index.php?act=listdh");
                 }
                 include "bill/updatebill.php";
                 break;

@@ -9,6 +9,7 @@ include "../model/cart.php";
 
 include "header.php";
 include "../global.php";
+ob_start();
 
 ?>
 <?php
@@ -229,13 +230,12 @@ if(!isset($_SESSION['mycart'])){
             break;
       
                 break;
-                case 'deletemybill':   
-                        if (isset($_GET['id'])) {   
-                            deletecart($_GET['id']);
-                        }
-                        $cart= loadalll_cart();  
-                      include "mybill.php";
-                      break;
+                case 'updatebill':   
+                    if (isset($_GET['id'])) {  
+                        updatebill($_GET['id']);
+                       header("Location: index.php?act=mybill");
+                    }
+                  break;
         default:
             include "body.php";
             break;
