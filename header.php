@@ -221,8 +221,8 @@ a:hover{
       <nav>
         <div class="navbar">
           <div class="logo">
-            <img src="/pic/logo.jpg" alt="">
-            <h1>admin</h1>
+            <!-- <img src="/pic/logo.jpg" alt=""> -->
+            <h1>Admin</h1>
           </div>
           <ul>
             <li><a href="index.php?act=listkh">
@@ -260,23 +260,13 @@ a:hover{
                 <span class="nav-item">Thống kê</span>
               </a>
             </li>
-            <li><a href="#" class="logout">
+            <li><a href="../view/index.php" class="logout">
                 <i class="fas fa-sign-out-alt"></i>
-                <span class="nav-item">Logout</span>
+                <span class="nav-item">Trang User</span>
               </a>
             </li>
           </ul>
         </div>
       </nav>
-      <!-- Hiển thị  -->
-      <!-- <section class="main">
-        <div class="main-top">
-          <p>Booking Hotel </p>
-        </div>
-        <div class="main-body">
-          <h1>Hiển thị </h1>
-
-        </div>
-    </div>
-    </section> -->
+    
    

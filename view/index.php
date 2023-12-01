@@ -1,4 +1,5 @@
 <?php
+ob_start();
 session_start();
 include "../model/pdo.php";
 include "../model/sanpham.php";
@@ -6,13 +7,14 @@ include "../model/danhmuc.php";
 include "../model/binhluan.php";
 include "../model/taikhoan.php";
 include "../model/cart.php";
-
 include "header.php";
 include "../global.php";
-ob_start();
+
 
 ?>
 <?php
+
+
 if(!isset($_SESSION['mycart'])){
     $_SESSION['mycart']=[];
     }
@@ -231,11 +233,18 @@ if(!isset($_SESSION['mycart'])){
       
                 break;
                 case 'updatebill':   
-                    if (isset($_GET['id'])) {  
-                        updatebill($_GET['id']);
+                    if (isset($_GET['id'])) { 
+                        $bill_status = "4";
+                        $id = $_GET['id'];
+                        update_bill($id,$bill_status);
+                        // var_dump($id,$bill_status);
                        header("Location: index.php?act=mybill");
-                    }
+                    } 
+                    include "mybill.php";
                   break;
+                  case 'my':
+                    include "my.php";
+                    break;
         default:
             include "body.php";
             break;
@@ -244,6 +253,7 @@ if(!isset($_SESSION['mycart'])){
     else{
     include "body.php";
     }
+    ob_end_flush();
 ?>
 <?php
 include "footer.php";

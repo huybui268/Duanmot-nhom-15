@@ -69,7 +69,7 @@
     </div>
 
 <?php } else { extract($_SESSION['user']) ?>
-<div class="trangtri1">
+<!-- <div class="trangtri1">
     <div class="boxcontent1 formtk">
         <p>Xin chào</p>
         <p>
@@ -85,7 +85,9 @@
         <?php } ?>
         <button><a href="index.php?act=logout" style="color:black;">Đăng xuất</a></button>
     </div>
-</div>
+</div> -->
+<?php
+header("Location: index.php");?>
     <?php } ?>
 
 </div>

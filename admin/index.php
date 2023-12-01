@@ -12,7 +12,7 @@ ob_start();
 ?>
 <?php
 
-include "header.php";
+include "../header.php";
 ?>
 
 <section class="main">

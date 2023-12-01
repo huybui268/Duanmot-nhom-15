@@ -44,7 +44,7 @@
                 <div class="col-md-8">
                     <div class="user-menu">
                         <ul>
-                            <li><a href="#"><i class="fa fa-user"></i> My Account</a></li>
+                            <li><a href="index.php?act=my"><i class="fa fa-user"></i> My Account</a></li>
                             <li><a href="#"><i class="fa fa-heart"></i> Wishlist</a></li>
                             <li><a href="index.php?act=mybill"><i class="fa fa-user"></i> My Cart</a></li>
                             <li><a href="checkout.html"><i class="fa fa-user"></i> Checkout</a></li>
@@ -54,7 +54,13 @@
                         <?php
                             }else { extract($_SESSION['user'])
                             ?>
-                                <a href="index.php?act=login"><i class="fa fa-user"></i><?php echo $user ?></a>
+                            <ul>
+                                <li><a href="index.php?act=login"><i class="fa fa-user"></i><?php echo $user ?></a></li>
+                                
+                                        <li><a href="../admin/index.php">Đăng nhập trang Admin</a></li>
+                                       
+                            </ul>
+                                
                             <?php
                             }
                             ?></li>

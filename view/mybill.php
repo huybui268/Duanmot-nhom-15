@@ -55,7 +55,7 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="product-bit-title text-center">
-                    <h2>Giỏ Hàng Của Tôi </h2>
+                    <h2>Đơn Hàng Của Tôi </h2>
                 </div>
             </div>
         </div>
@@ -105,7 +105,7 @@
                              if($bill_status == 0 ){
                                 ?>   
                              
-                             <td><a href="index.php?act=updatebill&id=<?php echo $id ?>"><input type="button" value="Hủy Đơn"></a></td>
+                             <td><a href="index.php?act=updatebill&id=<?php echo $id ?> "><input name="bill_status" type="button" value="Hủy Đơn"></a></td>
                              <?php
                              }
                              ?>
