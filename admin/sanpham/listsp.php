@@ -19,12 +19,13 @@
                 </form>
                 <table border="1" class="mb10">
                     <tr>
-                        <th>Chọn nhanh</th>
+                        
                         <th>Mã Sản Phẩm</th>
                         <th>Tên Sản Phẩm</th>
                         <th>Giá</th>
                         <th>Ảnh</th>
                         <th>Mô tả</th>
+                        <th>Màu</th>
                         <th>Lượt Xem</th>
                         <th>Chức năng</th>
                     </tr>
@@ -38,12 +39,13 @@
                             $img = "No file img!";
                         } ?>
                         <tr>
-                            <td><input type="checkbox" name=""></td>
+                            
                             <td><?php echo $id ?></td>
                             <td><?php echo $name ?></td>
                             <td><?php echo number_format($price) ?> VND</td>
                             <td><?php echo $img ?></td>
                             <td><?php echo $mota ?></td>
+                            <td><?php echo $mau ?></td>
                             <td><?php echo $luotxem ?></td>
                             <td><a href="index.php?act=updatesp&idsp=<?php echo $id ?>"><input type="button" value="Sửa"></a><br><br>
                                 <a onclick="return confirm('Bạn có chắc chắn muốn xóa')" href="index.php?act=deletesp&idsp=<?php echo $id ?>"><input type="button" value="Xóa"></a>

@@ -47,7 +47,7 @@
     }
 </style>
 <?php
- extract($cart);
+ extract($listbill);
 
 ?>
 <div class="product-big-title-area">
@@ -70,60 +70,55 @@
         <div class=" mb10 formds_loai">
             <table border="1" class="mb10" style="border:#ccc;">
                 <tr>
-                    <th></th>
-                    <th>Tên sản phẩm</th>
-                    <th>Hình ảnh</th>
-                    <th>Đơn giá</th>
-                    <th>Màu</th>
-                    <th>Số lượng</th>
-                    <th>Thành tiền</th>
-                    <th>Trạng Thái Đặt Hàng</th>
-                    <th></th>
-                    <th></th>
+                <th>Mã đơn hàng</th>
+                        <th>Khách hàng</th>
+                        <th>Số lượng hàng</th>
+                        <th>Tổng giá tiền</th>
+                        <th>Ngày đặt</th>
+                        <th>Thanh toán</th>
+                        <th>Tình trạng</th></th>
+                        <th>Chức năng</th>
+                        <td></td>
                     
                 </tr>
-                <?php foreach ($cart as $bill) {
+               <?php foreach ($listbill as $bill) {
                         extract($bill);
+                        $countsp=loadall_cart_count($id);
                         $ttdh=get_ttdh($bill_status);
-                        $hinh = $image_path . $img;
-                        ?>
-                             <td>
-                                <?php echo $id ?>
-                             </td>
+                        $pttt=get_pttt($bill_pttt); ?>
+                        <tr>
+                            <td>DA1-<?php echo $id ?></td>
                             <td>
-                                <?php echo $name?><br>
-                               
+                                <?php echo $bill_name ?><br>
+                                <?php echo $bill_email ?><br>
+                                <?php echo $bill_address ?><br>
+                                <?php echo $bill_tel ?>
                             </td>
-                            <td><img src="<?php echo $hinh ?>" alt="" width="70px" height="50px"></td>
-                            <td><?php echo number_format($price) ?> VND</td>
-                            <td><?php echo $mau ?></td>
-                            <td><?php echo $soluong ?></td>
-                            <td><?php echo number_format($thanhtien) ?> VND</td>
-                           <td><?php echo $ttdh?></td> 
-                        
-                           <?php
-                             if($bill_status == 0 ){
-                                ?>   
-                             
-                             <td><a href="index.php?act=updatebill&id=<?php echo $id ?> "><input name="bill_status" type="button" value="Hủy Đơn"></a></td>
-                             <?php
+                            <td><?php echo $countsp ?></td>
+                            <td><?php echo number_format($total) ?> VND</td>
+                            <td><?php echo date("d/m/Y", strtotime($ngaydathang)) ?></td>
+                            <td><?php echo $pttt ?></td>
+                            <td><?php echo $ttdh ?></td>
+                            <td>
+                                <?php
+                                if ($bill_status == 0 ) {
+                                    ?>
+                                    <a href="index.php?act=updatebill&iddh=<?php echo $id ?>" onclick="return confirm('Bạn có chắc chắn muốn hủy không')"><input type="button" value="Hủy"></a>  
+                             <?php   }
+                                ?>
+                                  <?php
+                                if ($bill_status == 1 ) {
+                                    ?>
+                                    <a href="index.php?act=updatebill&iddh=<?php echo $id ?>" onclick="return confirm('Bạn có chắc chắn muốn hủy không')"><input type="button" value="Hủy"></a>  
+                             <?php   }else{ ?>
+                                <!-- <a href="index.php?act=updatebill&iddh=<?php echo $id ?>" onclick="return confirm('Bạn có chắc chắn muốn khôi phục không')"><input type="button" value="Khôi Phục"></a> -->
+<?php
                              }
-                             ?>
-                             <?php
-                            if($bill_status == 1 ){
-                              ?>   
+                                ?>
+
                            
-                           <td><a href="index.php?act=updatebill&id=<?php echo $id ?>"><input type="button" value="Hủy Đơn"></a></td>
-                           <?php
-                           }else{
-                            ?>
-                            <td></td>
-                            <?php
-                           }
-                          ?>
-                      
-                       
-                      
+                        </td>
+                        <td><a href="index.php?act=listcart&idbill=<?php echo $id ?>"><input type="button" value="Chi Tiết Đơn"></a></td>
                         </tr>
                     <?php } ?>
             </table>

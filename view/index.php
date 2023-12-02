@@ -9,8 +9,7 @@ include "../model/taikhoan.php";
 include "../model/cart.php";
 include "header.php";
 include "../global.php";
-
-
+$sptop10 = loadall_sanpham_top10();
 ?>
 <?php
 
@@ -20,6 +19,7 @@ if(!isset($_SESSION['mycart'])){
     }
     $spnew= loadall_sanpham_home();
     $dsdm= loadall_danhmuc();
+  
     $sptop10 = loadall_sanpham_top10();
     if(isset($_GET['act']) && !empty($_GET['act'])){
     $act=$_GET['act'];
@@ -115,7 +115,7 @@ if(!isset($_SESSION['mycart'])){
             break;
         case 'logout':
             session_unset();//Đăng xuất
-            include "body.php";
+            header("Location:index.php");
             break;
         case 'quenmk':
             if(isset($_POST['guiemail'])){
@@ -226,25 +226,26 @@ if(!isset($_SESSION['mycart'])){
             break;
             
         case 'mybill':
-            $listbill=loadall_cart($_SESSION['user']['id']);
-            $cart= loadalll_cart();
+            $listbill=loadall_bill($_SESSION['user']['id']);
             include "mybill.php";
             break;
-      
+            case 'listcart':
+                if (isset($_GET['idbill'])) {
+                    $cart=loadall_cart1($_GET['idbill']);
+                }                     
+                include "chitietbill.php";
                 break;
                 case 'updatebill':   
-                    if (isset($_GET['id'])) { 
+                    if (isset($_GET['iddh'])) { 
                         $bill_status = "4";
-                        $id = $_GET['id'];
+                        $id = $_GET['iddh'];
                         update_bill($id,$bill_status);
                         // var_dump($id,$bill_status);
                        header("Location: index.php?act=mybill");
                     } 
                     include "mybill.php";
                   break;
-                  case 'my':
-                    include "my.php";
-                    break;
+            
         default:
             include "body.php";
             break;

@@ -98,7 +98,7 @@ switch ($n){
         $tt="Chờ Duyệt Đơn";
         break;
     case '1':
-        $tt="Người Gửi Đang Chuẩn Bị Hàng";
+        $tt="Đang Chuẩn Bị Hàng";
         break;
     case '2':
         $tt="Đang giao hàng";
@@ -107,8 +107,11 @@ switch ($n){
         $tt="Hoàn tất";
         break;
         case '4':
-            $tt="Đơn hàng đã hủy";
+            $tt="Chờ Xác Nhận ";
             break;  
+            case '5':
+                $tt="Đã Hủy ";
+                break; 
     default:
         $tt="Đơn hàng mới";
         break;
@@ -133,7 +136,7 @@ switch ($n){
 return $tt;
 }
 
-function updatebill($id){
+function updatebill($id,$bill_status){
 $sql= "UPDATE bill set `bill_status` = $bill_status where id=$id";
 pdo_execute($sql);
 

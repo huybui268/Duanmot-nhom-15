@@ -1,4 +1,8 @@
-
+<style>
+   li {
+list-style: none;
+}
+</style>
 <div class="product-big-title-area">
         <div class="container">
             <div class="row">
@@ -30,10 +34,13 @@
             <div class="boxcontent row">
                 <?php foreach ($sp_cungloai as $sp_cl) { 
                     extract($sp_cl);
+                    $hinh = $image_path . $img;
                     $link="index.php?act=ctsp&idsp=$id";
                     ?>
                 
                     <li><a href="<?php echo $link ?>"><?php echo $name ?></a></li>
+                    <!-- <li><a href="<?php echo $link ?>"><?php echo $hinh ?></a></li> -->
+
                 
                     <?php } ?>
             </div>
