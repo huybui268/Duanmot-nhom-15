@@ -1,11 +1,17 @@
-
+<style>
+    .search{
+    float: right;
+    height: 50px;
+    padding-right:100px;
+}
+</style>
 <div class="maincontent-area">
         <div class="zigzag-bottom"></div>
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
                     <div class="latest-product">
-                       <h2 class="section-title">Sản  Phẩm </h2>     
+                       <h2 class="section-title">Sản Phẩm Được Tìm Thấy </h2>     
                          <div class="product-carousel">
                        
                          <?php
@@ -52,3 +58,14 @@
             </div>
         </div>
     </div> <!-- End main content area -->
+    <div class="search">
+                                        <div class="boxfooter searchbox">
+                                            <form action="index.php?act=danhmucsp" method="POST">
+                                                <input type="text" placeholder="Từ khóa tìm kiếm" name="keyword">
+                                            </form>
+                                        </div>  
+                                    </div>  
+
+    <br>
+    <br>
+    <br>
