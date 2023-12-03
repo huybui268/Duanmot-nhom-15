@@ -210,6 +210,8 @@ include "../header.php";
                 //Biểu đồ thống kê
             case 'chart':
                 $thongke_chart=load_thongke();
+                $thongke_chart1=loadall_sanpham_top10();
+                
                 include "thongke/bieudo.php";
                 break;
                 case 'listcart':

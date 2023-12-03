@@ -7,7 +7,6 @@
             <div class="row mb10 formds_loai">
                 <table border="1" class="mb10">
                     <tr>
-                        <th>Chọn nhanh</th>
                         <th>STT</th>
                         <th>Tên tài khoản</th>
                         <th>Tên sản phẩm</th>
@@ -18,7 +17,6 @@
                     <?php foreach ($binhluan as $key => $bl) {
                         extract($bl); ?>
                         <tr>
-                            <td><input type="checkbox" name=""></td>
                             <td><?php echo $key + 1 ?></td>
                             <td><?php echo $user ?></td>
                             <td><?php echo $name ?></td>
@@ -29,9 +27,7 @@
                     <?php } ?>
                 </table>
                 </div>
-                <input type="button" value="Chọn tất cả">
-                <input type="button" value="Bỏ chọn tất cả">
-                <input type="button" value="Xóa các mục đã chọn">
+               
         </form>
     </div>
 </div>
