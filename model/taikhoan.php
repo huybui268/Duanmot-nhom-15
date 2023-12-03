@@ -11,6 +11,13 @@ function dangnhap($user,$pass) {
     return $taikhoan;
 }
 //user
+
+function checkemail($email) {
+    $sql="SELECT * FROM taikhoan WHERE email='$email'";
+    $taikhoan = pdo_query_one($sql);
+    return $taikhoan;
+}
+
 function sendMail($email) {
     $sql="SELECT * FROM taikhoan WHERE email='$email'";
     $taikhoan = pdo_query_one($sql);

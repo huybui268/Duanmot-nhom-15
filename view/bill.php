@@ -45,7 +45,7 @@
     .gio {
         background-color: #C0C0C0;
         border-radius: 5px;
-        padding:20px;
+        padding: 20px;
         width: 350px;
     }
 </style>
@@ -161,20 +161,20 @@
                             </div>
                         </div><br><br>
 
-    <div class="boxtitle">PHƯƠNG THỨC THANH TOÁN</div>
-                                <div class="thanhtoan ">
-                                    <div class=" mb10 formds_loai">
-                                        <input type="radio" value="1" name="pttt" checked>Trả tiền khi nhận hàng
-                                        <br>
-                                        <input type="radio" value="2" name="pttt">Chuyển khoản ngân hàng
-                                        <br>
-                                        <input type="radio" value="3" name="pttt">Thanh toán online
-                                    </div>
-                                </div><br><br>
+                        <div class="boxtitle">PHƯƠNG THỨC THANH TOÁN</div>
+                        <div class="thanhtoan ">
+                            <div class=" mb10 formds_loai">
+                                <input type="radio" value="1" name="pttt" checked>Trả tiền khi nhận hàng
+                                <br>
+                                <input type="radio" value="2" name="pttt">Chuyển khoản ngân hàng
+                                <br>
+                                <input type="radio" value="3" name="pttt">Thanh toán online
+                            </div>
+                        </div><br><br>
 
-            </div>
                 </div>
-            
+            </div>
+
 
             <div class="col-md-8">
                 <div class="product-content-right">
@@ -209,10 +209,11 @@
 
                                 <br>
                                 <br>
-                               
+
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+            
         </div>

@@ -16,17 +16,11 @@
 
     .headerr .mb10 {
         width: 1000px;
-        padding-left: 250px;
+        padding-left: 150px;
     }
 
-    .button {
-        padding-left: 250px;
-    }
-
-    .button1 {
-        padding-left: 630px;
-
-    }
+ 
+  
 
     .button2 {
         text-align: center;
@@ -84,7 +78,11 @@
                         </td>
                         </tr>
                     <?php } ?>
+                    
                 </table>
+                <br>
+                    <button><a href="index.php?act=mybill">Quay Lại</a></button>
+                    <br>
             </div>
            
         </form>

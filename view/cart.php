@@ -90,8 +90,9 @@
                                 <input type="hidden" name="price" id="price" value="<?php echo $cart[3] ?>">
                                   </td>
                                 <td>
-                                    <!-- <a onclick="giam(this)">-</a><span ><?php echo $cart[4] ?></span><a  onclick="tang(this)">+</a> -->
-                                    <input type="number" name="soluong" value="<?= $cart[4] ?>" min="1" id="quantity_<?= $cart[0] ?>" oninput="updateQuantity(<?= $cart[0] ?>)">
+                                    <!-- <a onclick="giam(this)">-</a><span ><?php echo $cart[4] ?></span><a  onclick="tang(this)">+</a>
+                                    <input type="number" name="soluong" value="<?= $cart[4] ?>" min="1" id="quantity_<?= $cart[0] ?>" oninput="updateQuantity(<?= $cart[0] ?>)"> -->
+                                    <a href="" ><?php echo $cart[4] ?></a>
                                 </td>
                                 <td><?php echo $cart[5] ?></td>
                                 <td><?php echo number_format($tongtien) ?> VND

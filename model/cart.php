@@ -58,6 +58,7 @@ function loadall_cart1($idbill){
 function deletecart1($id){
     $sql="DELETE FROM cart where idb = $id" ;
      pdo_execute($sql);
+     var_dump($idbill);
  }
 function loadalll_cart(){
     $sql="SELECT c.id,c.name,c.img,c.price,c.mau,c.soluong,c.thanhtien,b.bill_status FROM cart c join bill b on  c.idbill = b.id ";
@@ -70,17 +71,17 @@ function loadall_cart_count($idbill){
     return count($bill);
 }
 function loadall_bill($iduser){
-    $sql="SELECT * FROM bill where iduser=$iduser";
+    $sql="SELECT * FROM bill where iduser=$iduser ORDER BY `id` DESC";
     $listbill=pdo_query($sql);
     return $listbill;
 }
 function loadall_billdh(){
-    $sql="SELECT * FROM bill order by iduser desc";
+    $sql="SELECT * FROM bill ORDER BY `id` DESC ";
     $listbill=pdo_query($sql);
     return $listbill;
 }
 function loadall_billdh1(){
-    $sql="SELECT * FROM bill ";
+    $sql="SELECT * FROM bill ORDER BY `id` DESC ";
     $listbill=pdo_query($sql);
     return $listbill;
 }

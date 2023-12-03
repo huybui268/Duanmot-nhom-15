@@ -120,8 +120,16 @@ if(!isset($_SESSION['mycart'])){
         case 'quenmk':
             if(isset($_POST['guiemail'])){
             $email=$_POST['email'];
-            $sendMail=sendMail($email);
+            // $sendMail=sendMail($email);
+            $checkemail= checkemail($email);
+            if (is_array($checkemail)){ 
+               $thongbao7 = "Mật khẩu của bạn là : ".$checkemail['pass'];
+            
+            }else{
+                $thongbao7="Không tồn tại";
             }
+            // header("Location:index.php?act=quenmk.php");
+        }
             include "login/quenmk.php";
             break;
         case 'edit_tk':

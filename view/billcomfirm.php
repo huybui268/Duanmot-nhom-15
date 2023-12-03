@@ -20,7 +20,7 @@ $pttt=get_pttt($bill_pttt);
             <div class="boxtitle">THÔNG TIN ĐƠN HÀNG</div>
             <div class="boxcontent_bill" style="">
                 <div class=" mb10 formds_loai">
-                   Mã đơn hàng: DAM-<?php echo $id ?>
+                   Mã đơn hàng: DA1-<?php echo $id ?>
                    <br>
                    Ngày đặt hàng: <?php echo date("d/m/Y", strtotime($ngaydathang)) ?>
                    <br>

@@ -260,7 +260,7 @@ a:hover{
                 <span class="nav-item">Thống kê</span>
               </a>
             </li>
-            <li><a href="../view/index.php" class="logout">
+            <li><a href="../view/index.php" >
                 <i class="fas fa-sign-out-alt"></i>
                 <span class="nav-item">Trang User</span>
               </a>

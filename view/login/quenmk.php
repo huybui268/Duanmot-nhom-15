@@ -30,11 +30,9 @@
                 </div><br>
                 <input type="submit" value="Gửi" name="guiemail">
                 <input type="reset" value="Nhập lại"><br><br>
-                <p style="color:red;"><?php
-                if(isset($sendMail) && !empty($sendMail)){
-                echo $sendMail;
-                }
-                ?></p>
+                <p style="color: red;"><?php if (isset($thongbao7)&& !empty($thongbao7)) {
+                echo $thongbao7;
+                } ?></p>
             </form>
         </div>
         </div>

@@ -25,7 +25,6 @@
                         <th>Giá</th>
                         <th>Ảnh</th>
                         <th>Mô tả</th>
-                        <th>Màu</th>
                         <th>Lượt Xem</th>
                         <th>Chức năng</th>
                     </tr>
@@ -45,7 +44,6 @@
                             <td><?php echo number_format($price) ?> VND</td>
                             <td><?php echo $img ?></td>
                             <td><?php echo $mota ?></td>
-                            <td><?php echo $mau ?></td>
                             <td><?php echo $luotxem ?></td>
                             <td><a href="index.php?act=updatesp&idsp=<?php echo $id ?>"><input type="button" value="Sửa"></a><br><br>
                                 <a onclick="return confirm('Bạn có chắc chắn muốn xóa')" href="index.php?act=deletesp&idsp=<?php echo $id ?>"><input type="button" value="Xóa"></a>
@@ -54,9 +52,7 @@
                     <?php } ?>
                 </table>
             </div>
-            <input type="button" value="Chọn tất cả">
-            <input type="button" value="Bỏ chọn tất cả">
-            <input type="button" value="Xóa các mục đã chọn">
+          
             <a href="index.php?act=addsp"><input type="button" value="Nhập thêm"></a>
         </form>
     </div>
