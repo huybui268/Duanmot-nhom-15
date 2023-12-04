@@ -192,6 +192,7 @@ if(!isset($_SESSION['mycart'])){
             }
             else{
             $_SESSION['mycart']=[];
+            header("Location:cart.php");
             }
             include "cart.php";
             break;

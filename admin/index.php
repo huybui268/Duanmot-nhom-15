@@ -172,6 +172,7 @@ include "../header.php";
                     $role = $_POST['role'];
                     $id = $_POST['id'];
                     update_khachhang($user, $pass, $email, $address, $tel, $role, $id);
+                    header("location:index.php?act=listkh");
                     
                 }
                 $dskh = loadall_khachhang();
