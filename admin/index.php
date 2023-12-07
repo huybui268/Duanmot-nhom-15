@@ -265,6 +265,26 @@ include "../header.php";
                 }
                 include "bill/updatebill.php";
                 break;
+                case 'updatebill1':
+                    if(isset($_GET['iddh']) & $_GET['iddh'] > 0){
+                        $bill = loadone_bill($_GET['iddh']);
+                        $bill_status = 5 ;
+                        $id = $_GET['iddh'];
+                        update_bill($id, $bill_status);
+                        header("location:index.php?act=listdh");
+                    }
+                    
+                    break;
+                    case 'updatebill2':
+                        if(isset($_GET['iddh']) & $_GET['iddh'] > 0){
+                            $bill = loadone_bill($_GET['iddh']);
+                            $bill_status = 6 ;
+                            $id = $_GET['iddh'];
+                            update_bill($id, $bill_status);
+                            header("location:index.php?act=listdh");
+                        }
+                        
+                        break;
                 case "deletebill":
                     if (isset($_GET['iddh'])) {
                         deletebill($_GET['iddh']);

@@ -2,7 +2,11 @@
    li {
 list-style: none;
 }
+
 </style>
+
+
+                         
 <div class="product-big-title-area">
         <div class="container">
             <div class="row">
@@ -47,13 +51,14 @@ list-style: none;
                     </div>
                     
                </div>
+
                <?php extract($sp); 
   $hinh = $image_path . $img;
  ?>
                 <div class="col-md-8">
                     <div class="product-content-right">
                         <div class="product-breadcroumb">
-                            <a href="">Home</a>
+                            <a href="index.php">Home</a>
                             <a href=""><?php echo $name ?></a>
                         </div>
                         
@@ -103,9 +108,7 @@ list-style: none;
                                     </h5>
                                     </div>
                                     <div class="add"><a href="">
-                                    <button
-                                     
-                                    name="addtocart">Thêm vào giỏ hàng</button>
+                                    <button name="addtocart">Thêm vào giỏ hàng</button>
                                         
                                     </div>
                            </form>   
@@ -228,6 +231,7 @@ list-style: none;
             </div>
         </div>
     </div>
+
     <!-- <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 <script>
     let totalProduct = document.getElementById('totalProduct');

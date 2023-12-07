@@ -1,3 +1,10 @@
+<style>
+    .button1{
+        width:20px;
+        text-align:center;
+    }
+    
+</style>
 <div class="row">
     <div class="row formtitle mb10">
         <h1>DANH SÁCH SẢN PHẨM</h1>
@@ -45,8 +52,8 @@
                             <td><?php echo $img ?></td>
                             <td><?php echo $mota ?></td>
                             <td><?php echo $luotxem ?></td>
-                            <td><a href="index.php?act=updatesp&idsp=<?php echo $id ?>"><input type="button" value="Sửa"></a><br><br>
-                                <a onclick="return confirm('Bạn có chắc chắn muốn xóa')" href="index.php?act=deletesp&idsp=<?php echo $id ?>"><input type="button" value="Xóa"></a>
+                            <td><a class="button1" href="index.php?act=updatesp&idsp=<?php echo $id ?>"><input type="button" value="Sửa"></a><br><br>
+                                <a class="button1" onclick="return confirm('Bạn có chắc chắn muốn xóa')" href="index.php?act=deletesp&idsp=<?php echo $id ?>"><input type="button" value="Xóa"></a>
                             </td>
                         </tr>
                     <?php } ?>

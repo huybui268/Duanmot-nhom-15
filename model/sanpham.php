@@ -48,11 +48,7 @@ function tangluotxem($idsp){
     $sql = "update sanpham set luotxem = $luotxem where id = $idsp";
     pdo_execute($sql);
 }
-function sltonkho($idsp){
-    $sanpham = loadone_sanpham($idsp);
-    $sltonkho = $sanpham['soluongkho']-$cart['soluong'];
-    $sql ="update sanpham join cart on sanpham.id = cart.id";
-}
+
 function get_mau($n){
     switch ($n){
         case '1':

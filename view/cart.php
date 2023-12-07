@@ -82,7 +82,7 @@
                             ?>
    
                             <tr>
-                                <td><?php $cart[0] ?></td>
+                                <td><?= $cart[0] ?></td>
                                 <td><?php echo $cart[1] ?></td>
                                 <td><img src="<?php echo $hinh ?>" alt="" width="70px" height="50px"></td>
                                 <td>
@@ -112,6 +112,7 @@
                                         </tr>
                                         <tr>
                                             <td class="actions" colspan="6">
+
                                                        <?php if(isset($_SESSION['user'])){ ?><a href="index.php?act=sp"><input type="button" name="thaydoi" value="Mua Thêm Sản Phẩm "></a><br>   
                                                         <br>
                                 <a href="index.php?act=bill"><input type="button" value="Đặt hàng"></a>
@@ -121,6 +122,7 @@
                             <?php } else { ?>
                                 <p style="color:red;">Vui lòng đăng nhập để đặt hàng</p>
                             <?php } ?>
+                            
                             <a onclick="return confirm('Bạn có chắc chắn muốn xóa hết')" href="index.php?act=deletecart"><input type="button" value="Xóa hết"></a><br><br>
 
                                             </td>

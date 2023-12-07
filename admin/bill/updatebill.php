@@ -16,11 +16,14 @@ extract($bill);
                 <option value="1" <?php echo ($bill_status == 1) ? 'selected' : ''; ?>>Đang Chuẩn Bị Hàng</option>
                 <option value="2" <?php echo ($bill_status == 2) ? 'selected' : ''; ?>>Đang giao hàng</option>
                 <option value="3" <?php echo ($bill_status == 3) ? 'selected' : ''; ?>>Đã giao hàng</option>
-                <option value="5" <?php echo ($bill_status == 5) ? 'selected' : ''; ?>>Đã Hủy</option>
+              
             </select>
             </div><br>
             <input type="hidden" value="<?php echo $id ?>" name="id">
             <input name="capnhatbill" type="submit" value="Cập nhật">
         </form>
-    </div>
+    </div>  
+    <?php
+          var_dump($bill_status);
+          ?>
 </div>

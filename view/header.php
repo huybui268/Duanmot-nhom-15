@@ -58,6 +58,10 @@
         ul li:hover ul.dropdown {
             display: block;
         }
+        .logo{
+           width:200px;
+           height:150px;
+        }
     </style>
 </head>
 
@@ -148,7 +152,7 @@
             <div class="row">
                 <div class="col-sm-6">
                     <div class="logo">
-                        <h1><a href="./"><img src="../assets/logo.jpg"></a></h1>
+                        <h1><a href="./"><img src="../assets/logo2.jpg.png"></a></h1>
                     </div>
                 </div>
 

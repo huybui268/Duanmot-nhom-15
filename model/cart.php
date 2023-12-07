@@ -108,11 +108,14 @@ switch ($n){
         $tt="Hoàn tất";
         break;
         case '4':
-            $tt="Chờ Xác Nhận ";
+            $tt="Chờ Xác Nhận Hủy ";
             break;  
             case '5':
                 $tt="Đã Hủy ";
                 break; 
+               case '6':
+                $tt="Yêu cầu hủy đơn của bạn không được chấp nhận";
+                    break; 
     default:
         $tt="Đơn hàng mới";
         break;

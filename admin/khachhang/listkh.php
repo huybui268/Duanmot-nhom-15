@@ -7,7 +7,6 @@
             <div class="row mb10 formds_loai">
                 <table border="1" class="mb10">
                     <tr>
-                    <th>Chọn nhanh</th>
                     <th>Mã tài khoản</th>
                     <th>Tên khách hàng</th>
                     <th>Mật khẩu</th>
@@ -21,7 +20,6 @@
                         extract($kh);
                         ?>
                         <tr>
-                            <td><input type="checkbox" name=""></td>
                             <td><?php echo $id ?></td>
                             <td><?php echo $user ?></td>
                             <td><?php echo $pass ?></td>
@@ -42,9 +40,7 @@
                     <?php } ?>
                 </table>
             </div>
-            <input type="button" value="Chọn tất cả">
-            <input type="button" value="Bỏ chọn tất cả">
-            <input type="button" value="Xóa các mục đã chọn">
+          
             <a href="index.php?act=addkh"><input type="button" value="Thêm tài khoản"></a>
         </form>
     </div>

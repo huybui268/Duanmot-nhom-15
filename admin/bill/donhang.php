@@ -1,3 +1,14 @@
+<style>
+    .button1{
+        width:20px;
+        text-align:center;
+       
+    }
+    .button1 input{
+        background: aqua;
+        border: 1px solid #00CCFF;
+    }
+</style>
 <div class="row">
     <div class="row formtitle mb10">
         <h1>THỐNG KÊ ĐƠN HÀNG</h1>
@@ -15,7 +26,8 @@
                         <th>Thanh toán</th>
                         <th>Tình trạng</th></th>
                         <th>Chức năng</th>
-                        <td></td>
+                        <th>Duyệt đơn hủy</th>
+                        <th>Chi tiết hóa đơn</th>
                     </tr>
                     <?php foreach ($listbill as $bill) {
                         extract($bill);
@@ -35,10 +47,29 @@
                             <td><?php echo date("d/m/Y", strtotime($ngaydathang)) ?></td>
                             <td><?php echo $pttt ?></td>
                             <td><?php echo $ttdh ?></td>
-                            <td><a href="index.php?act=updatebill&iddh=<?php echo $id ?>"><input type="button" value="Sửa"></a>
-                           
+                            <td>
+
+                                <a class="button1" href="index.php?act=updatebill&iddh=<?php echo $id ?>"><input  type="button" value="Sửa"></a>
+                                
                         </td>
-                        <td><a href="index.php?act=listcart&idbill=<?php echo $id ?>"><input type="button" value="Chi Tiết Đơn"></a></td>
+                        <td>
+                             
+                            <?php if($bill_status == 5 ){?>
+
+                               
+                         <?php }elseif($bill_status == 0){?>
+                            <?php }elseif($bill_status == 1){?>
+                                <?php }elseif($bill_status == 2){?>
+                                    <?php }elseif($bill_status == 3){?>
+                                        <?php }elseif($bill_status == 6){?>
+                         
+                         <?php }else{  ?>
+                            <a class="button1" href="index.php?act=updatebill1&iddh=<?php echo $id ?>"><input type="button" value="Đồng ý"></a>
+                        <a class="button1" href="index.php?act=updatebill2&iddh=<?php echo $id ?>"><input type="button" value="Không đồng ý"></a>
+                        <?php } ?>
+                        
+                    </td>
+                        <td><a class="button1" href="index.php?act=listcart&idbill=<?php echo $id ?>"><input  type="button" value="Chi Tiết Đơn"></a></td>
                         </tr>
                     <?php } ?>
                 </table>

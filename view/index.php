@@ -254,7 +254,16 @@ if(!isset($_SESSION['mycart'])){
                     } 
                     include "mybill.php";
                   break;
-            
+                  case 'updatebill1':
+                    if(isset($_GET['iddh']) & $_GET['iddh'] > 0){
+                        $bill = loadone_bill($_GET['iddh']);
+                        $bill_status = 0 ;
+                        $id = $_GET['iddh'];
+                        update_bill($id, $bill_status);
+                        header("Location: index.php?act=mybill");
+                    }
+                    
+                    break;
         default:
             include "body.php";
             break;

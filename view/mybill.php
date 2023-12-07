@@ -116,7 +116,18 @@
                              }
                                 ?>
 
-                           
+<?php
+                                if ($bill_status == 6 ) {
+                                    ?>
+                                    <a href="index.php?act=updatebill1&iddh=<?php echo $id ?>" onclick="return confirm('Bạn có chắc chắn muốn đặt lại không')"><input type="button" value="Đặt lại "></a>  
+                            
+                             <?php   } ?>   
+                             <?php
+                                if ($bill_status == 4 ) {
+                                    ?>
+                                    <a href="index.php?act=updatebill1&iddh=<?php echo $id ?>" onclick="return confirm('Bạn có chắc chắn muốn đặt lại không')"><input type="button" value="Không hủy nữa"></a>  
+                            
+                             <?php   } ?>                     
                         </td>
                         <td><a href="index.php?act=listcart&idbill=<?php echo $id ?>"><input type="button" value="Chi Tiết Đơn"></a></td>
                         </tr>
