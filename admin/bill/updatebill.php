@@ -23,7 +23,5 @@ extract($bill);
             <input name="capnhatbill" type="submit" value="Cập nhật">
         </form>
     </div>  
-    <?php
-          var_dump($bill_status);
-          ?>
+ 
 </div>

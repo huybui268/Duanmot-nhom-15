@@ -45,6 +45,7 @@ include "../header.php";
                     else{
                     $iddm=$_POST['iddm'];
                     $tensp=$_POST['tensp'];
+                    $gia=$_POST['gia'];
                     $giasp=$_POST['giasp'];
                     $img=$_FILES['hinh']['name'];
                     $mota=$_POST['mota'];
@@ -52,7 +53,7 @@ include "../header.php";
                     $target_dir=$image_path;
                     $target_file=$target_dir.basename($_FILES['hinh']['name']);
                     move_uploaded_file($_FILES['hinh']['tmp_name'],$target_file);
-                    insert_sanpham($tensp,$giasp,$img,$mota,$iddm,$mota_dai);
+                    insert_sanpham($tensp,$gia,$giasp,$img,$mota,$iddm,$mota_dai);
                     $thanhcong="Thêm thành công";
                     }
                 }

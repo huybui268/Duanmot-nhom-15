@@ -18,6 +18,10 @@
                 <input type="text" name="tensp" placeholder="Nhập tên sản phẩm">
             </div><br>
             <div>
+                <label>Giá cũ của sản phẩm</label><br><br>
+                <input type="number" name="gia" placeholder="Nhập giá sản phẩm">
+            </div><br>
+            <div>
                 <label>Giá sản phẩm</label><br><br>
                 <input type="number" name="giasp" placeholder="Nhập giá sản phẩm">
             </div><br>

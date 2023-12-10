@@ -37,8 +37,8 @@ function load_sanpham_cungloai($id, $iddm){
     return $result;
 }
 //admin
-function insert_sanpham($tensp,$giasp,$img,$mota,$iddm,$mota_dai){
-    $sql = "INSERT INTO `sanpham`(`name`, `price`, `img`, `mota`, `iddm`,`mota_dai`) VALUES ('$tensp', '$giasp', '$img', '$mota', '$iddm','$mota_dai')";
+function insert_sanpham($tensp,$gia,$giasp,$img,$mota,$iddm,$mota_dai){
+    $sql = "INSERT INTO `sanpham`(`name`,`gia`,`price`, `img`, `mota`, `iddm`,`mota_dai`) VALUES ('$tensp','$gia', '$giasp', '$img', '$mota', '$iddm','$mota_dai')";
     pdo_execute($sql);
 }
 //user

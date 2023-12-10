@@ -32,6 +32,7 @@ $name ="";
                 <label>Tên sản phẩm</label><br><br>
                 <input type="text" name="tensp" value="<?php echo $name ?>" required>
             </div><br>
+          
             <div>
                 <label>Giá sản phẩm</label><br><br>
                 <input type="text" name="giasp" value="<?php echo $price ?>" required>
